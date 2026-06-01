@@ -1,0 +1,62 @@
+## .NET build output
+bin/
+obj/
+out/
+publish/
+*.dll
+*.exe
+*.pdb
+*.user
+*.userosscache
+*.suo
+*.userprefs
+*.sln.docstates
+
+## VS / Rider / VSCode
+.vs/
+.vscode/
+.idea/
+*.swp
+*.swo
+*_i.c
+*_p.c
+*_h.c
+*.ilk
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+## NuGet
+*.nupkg
+*.snupkg
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nuget.props
+*.nuget.targets
+
+## Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.coverage
+*.coveragexml
+
+## OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+## App data (runtime-created)
+Data/*.json
+!Data/.gitkeep
+
+## Sensitive
+*.pfx
+*.p12
+*.key
+secrets.json
+appsettings.*.json
+appsettings.Local.json

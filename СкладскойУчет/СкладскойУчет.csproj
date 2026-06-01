@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>СкладскойУчет</AssemblyName>
+    <RootNamespace>WarehouseAccounting</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Сериализация / десериализация JSON (хранение данных) -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+
+    <!-- Экспорт в Excel (.xlsx) -->
+    <PackageReference Include="ClosedXML" Version="0.102.2" />
+
+    <!-- Генерация PDF-отчётов -->
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
+  </ItemGroup>
+
+  <!-- JSON-файлы данных копируются рядом с exe при сборке -->
+  <ItemGroup>
+    <Content Include="Data\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
